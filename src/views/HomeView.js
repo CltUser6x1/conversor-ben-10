@@ -68,7 +68,7 @@ export default function HomeView({
                 <Text style={styles.label}>De</Text>
                 <View style={styles.pickerWrap}>
                   <Picker
-                    selectedValue={fromCurrency}
+                    selectedValue={currencies.length > 0 ? fromCurrency : ''}
                     onValueChange={setFromCurrency}
                     style={styles.picker}
                     enabled={!loading && !loadingCurrencies && currencies.length > 0}
@@ -99,7 +99,7 @@ export default function HomeView({
                 <Text style={styles.label}>Para</Text>
                 <View style={styles.pickerWrap}>
                   <Picker
-                    selectedValue={toCurrency}
+                    selectedValue={currencies.length > 0 ? toCurrency : ''}
                     onValueChange={setToCurrency}
                     style={styles.picker}
                     enabled={!loading && !loadingCurrencies && currencies.length > 0}
@@ -131,7 +131,7 @@ export default function HomeView({
                 onPress={convert}
                 disabled={loading || loadingCurrencies || currencies.length === 0}
               >
-                {loading ? (
+                {loading || loadingCurrencies ? (
                   <ActivityIndicator color="#03131f" />
                 ) : (
                   <Text style={styles.buttonText}>Converter</Text>
