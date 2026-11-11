@@ -2,6 +2,10 @@
 
 Aplicativo em React Native e Expo para consultar a conversão entre moedas. As cotações vêm da API pública Frankfurter.
 
+## Captura de tela
+
+![Conversor de moedas com uma conversão de USD para BRL](./screenshots/conversor.png)
+
 ## Como executar
 
 Instale o [Node.js](https://nodejs.org/) e, na pasta do projeto, rode:
