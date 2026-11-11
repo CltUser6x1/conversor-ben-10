@@ -4,37 +4,37 @@ Aplicativo em React Native e Expo para consultar a conversão entre moedas. As c
 
 ## Capturas dos cenários
 
-As imagens mostram o carregamento, as validações, as conversões e as mensagens de erro do aplicativo. As taxas e datas de conversão são fornecidas pela API Frankfurter.
+As imagens mostram as principais telas e respostas do aplicativo.
 
-### Abertura e carregamento
+### Abertura e conversão
 
-| Tela inicial | Carregando moedas |
+| Tela inicial | Carregando as moedas |
 | --- | --- |
-| ![Tela inicial com as moedas disponíveis](./screenshots/inicio.png) | ![Carregamento da lista de moedas](./screenshots/carregando-moedas.png) |
+| ![Tela inicial do conversor](./screenshots/inicio.png) | ![Lista de moedas carregando](./screenshots/carregando-moedas.png) |
 
-| Carregando conversão | Conversão decimal com taxa e data |
+| Consultando a cotação | Conversão concluída |
 | --- | --- |
-| ![Indicador durante a consulta da cotação](./screenshots/carregando-conversao.png) | ![Conversão de 100,50 USD para BRL com taxa e data](./screenshots/conversor.png) |
+| ![Indicador durante a consulta da cotação](./screenshots/carregando-conversao.png) | ![Conversão de USD para BRL com taxa e data](./screenshots/conversor.png) |
 
-### Validações
+### Validação dos dados
 
-| Valor vazio | Valor igual a zero |
+| Campo vazio | Valor igual a zero |
 | --- | --- |
-| ![Mensagem para informar um valor](./screenshots/campo-vazio.png) | ![Mensagem para valor igual a zero](./screenshots/valor-zero.png) |
+| ![Mensagem para preencher o valor](./screenshots/campo-vazio.png) | ![Mensagem para valor igual a zero](./screenshots/valor-zero.png) |
 
 | Valor negativo | Moedas iguais |
 | --- | --- |
-| ![Mensagem para valor negativo](./screenshots/valor-negativo.png) | ![Bloqueio da conversão entre moedas iguais](./screenshots/moedas-iguais.png) |
+| ![Mensagem para valor negativo](./screenshots/valor-negativo.png) | ![Mensagem ao escolher a mesma moeda](./screenshots/moedas-iguais.png) |
 
-### Resultado, falha e limpeza
+### Falha e novas tentativas
 
 | Falha de conexão | Nova conversão |
 | --- | --- |
-| ![Mensagem de falha de conexão e orientação para tentar novamente](./screenshots/falha-conexao.png) | ![Nova conversão de EUR para BRL](./screenshots/nova-conversao.png) |
+| ![Mensagem de falha de conexão](./screenshots/falha-conexao.png) | ![Nova conversão de EUR para BRL](./screenshots/nova-conversao.png) |
 
-| Valor limpo após a conversão |
+| Valor limpo |
 | --- |
-| ![Tela após limpar o valor e o resultado](./screenshots/valor-limpo.png) |
+| ![Tela após limpar o valor da conversão](./screenshots/valor-limpo.png) |
 
 ## Como executar
 
