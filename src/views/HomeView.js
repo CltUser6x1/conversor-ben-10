@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import {
   ActivityIndicator,
   Keyboard,
@@ -68,7 +68,7 @@ export default function HomeView({
                 <Text style={styles.label}>De</Text>
                 <View style={styles.pickerWrap}>
                   <Picker
-                    selectedValue={currencies.length > 0 ? fromCurrency : ''}
+                    selectedValue={fromCurrency}
                     onValueChange={setFromCurrency}
                     style={styles.picker}
                     enabled={!loading && !loadingCurrencies && currencies.length > 0}
@@ -99,7 +99,7 @@ export default function HomeView({
                 <Text style={styles.label}>Para</Text>
                 <View style={styles.pickerWrap}>
                   <Picker
-                    selectedValue={currencies.length > 0 ? toCurrency : ''}
+                    selectedValue={toCurrency}
                     onValueChange={setToCurrency}
                     style={styles.picker}
                     enabled={!loading && !loadingCurrencies && currencies.length > 0}
@@ -131,7 +131,7 @@ export default function HomeView({
                 onPress={convert}
                 disabled={loading || loadingCurrencies || currencies.length === 0}
               >
-                {loading || loadingCurrencies ? (
+                {loading ? (
                   <ActivityIndicator color="#03131f" />
                 ) : (
                   <Text style={styles.buttonText}>Converter</Text>
