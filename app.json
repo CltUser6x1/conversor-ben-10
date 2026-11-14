@@ -9,6 +9,11 @@
       "resizeMode": "contain",
       "backgroundColor": "#10111B"
     },
-    "assetBundlePatterns": ["**/*"]
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "plugins": [
+      "expo-status-bar"
+    ]
   }
 }

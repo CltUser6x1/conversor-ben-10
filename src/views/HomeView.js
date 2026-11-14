@@ -3,6 +3,7 @@ import {
   ActivityIndicator,
   Keyboard,
   Pressable,
+  Platform,
   SafeAreaView,
   ScrollView,
   StyleSheet,
@@ -80,7 +81,7 @@ export default function HomeView({
                           key={currency.code}
                           label={`${currency.code} — ${currency.name}`}
                           value={currency.code}
-                          color="#eafcff"
+                          color={Platform.OS === 'android' ? '#07141f' : '#eafcff'}
                         />
                       ))
                     ) : (
@@ -88,7 +89,7 @@ export default function HomeView({
                         label={loadingCurrencies ? 'Carregando moedas...' : 'Moedas indisponíveis'}
                         value=""
                         enabled={false}
-                        color="#eafcff"
+                        color={Platform.OS === 'android' ? '#07141f' : '#eafcff'}
                       />
                     )}
                   </Picker>
@@ -111,7 +112,7 @@ export default function HomeView({
                           key={currency.code}
                           label={`${currency.code} — ${currency.name}`}
                           value={currency.code}
-                          color="#eafcff"
+                          color={Platform.OS === 'android' ? '#07141f' : '#eafcff'}
                         />
                       ))
                     ) : (
@@ -119,7 +120,7 @@ export default function HomeView({
                         label={loadingCurrencies ? 'Carregando moedas...' : 'Moedas indisponíveis'}
                         value=""
                         enabled={false}
-                        color="#eafcff"
+                        color={Platform.OS === 'android' ? '#07141f' : '#eafcff'}
                       />
                     )}
                   </Picker>
@@ -286,6 +287,7 @@ const styles = StyleSheet.create({
     color: '#f2fbff',
     backgroundColor: '#0b1824',
     height: 52,
+    ...(Platform.OS === 'web' ? { colorScheme: 'dark' } : {}),
   },
   button: {
     backgroundColor: '#69f0c7',
